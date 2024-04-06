@@ -9,13 +9,14 @@ import 'package:works_app/cardModel.dart';
 
 class DetailsPage extends StatelessWidget {
   final CardModel model;
-
-  DetailsPage({
+ DetailsPage({
     Key? key,
     required this.model,
   }) : super(key: key);
 
   Widget build(BuildContext context) {
+      Color color =//Color.fromARGB(255, 243, 225, 206);
+       Colors.brown.shade400;
     Future<void> _onOpen(LinkableElement link) async {
       if (!await launchUrl(Uri.parse(link.url))) {
         throw Exception('Could not launch ${link.url}');
@@ -88,7 +89,8 @@ class DetailsPage extends StatelessWidget {
                   spreadRadius: 0,
                 ),
               ],
-              color: Color.fromARGB(192, 58, 94, 89),
+              color:color,
+            
               borderRadius: BorderRadius.circular(25),
             ),
             child: Column(
@@ -138,7 +140,7 @@ class DetailsPage extends StatelessWidget {
                   spreadRadius: 0,
                 ),
               ],
-              color: Color.fromARGB(192, 58, 94, 89),
+              color:color,
               borderRadius: BorderRadius.circular(25),
             ),
             child: Column(
@@ -188,7 +190,7 @@ class DetailsPage extends StatelessWidget {
                   spreadRadius: 0,
                 ),
               ],
-              color: Color.fromARGB(192, 58, 94, 89),
+              color:color,
               borderRadius: BorderRadius.circular(25),
             ),
             child: Column(
@@ -238,7 +240,7 @@ class DetailsPage extends StatelessWidget {
                   spreadRadius: 0,
                 ),
               ],
-              color: Color.fromARGB(192, 58, 94, 89),
+              color:color,
               borderRadius: BorderRadius.circular(25),
             ),
             child: SingleChildScrollView(
@@ -285,7 +287,7 @@ class DetailsPage extends StatelessWidget {
                   spreadRadius: 0,
                 ),
               ],
-              color: Color.fromARGB(192, 58, 94, 89),
+              color:color,
               borderRadius: BorderRadius.circular(25),
             ),
             child: Column(

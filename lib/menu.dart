@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 import 'package:showcaseview/showcaseview.dart';
 import 'package:works_app/about_me.dart';
@@ -146,9 +147,9 @@ body:  Stack(
                         onTap: () {
                           Navigator.push(
                               context,
-                              MaterialPageRoute(
-                                builder: (context) => AboutMePage(),
-                              ));
+                              //MaterialPageRoute(builder:(context) => AboutMePage(),)
+                              PageTransition(child:AboutMePage(), type:PageTransitionType.fade )
+                              );
                         },
                         child: Text('About Me',
                             style: GoogleFonts.bagelFatOne(
@@ -194,9 +195,9 @@ body:  Stack(
                         final card = cards[index];
                         return buildDataContaine(
                           model: card,
-                        )
-                            .animate()
-                            .then(delay: .1.seconds, duration: .3.seconds);
+                        ); 
+                            // .animate()
+                            // .then(delay: .1.seconds, duration: .3.seconds);
                       },
                     )
                         .animate()
@@ -230,9 +231,9 @@ body:  Stack(
                       top: isOpen ? 32 : 2,
                       duration: Duration(seconds: 1),
                       child: Showcase(
-                        overlayOpacity: 0.1,
+                        overlayOpacity: 0,
                         tooltipBackgroundColor:
-                           Color(0xffd1bdb1),
+                          Color.fromARGB(255, 243, 225, 206),
                         key: keyOne,
                         description: 'Pull the blind down ',
                         child: Container(

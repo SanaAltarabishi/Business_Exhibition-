@@ -6,7 +6,6 @@ import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/services.dart';
 
-
 class AboutMePage extends StatefulWidget {
   @override
   State<AboutMePage> createState() => _AboutMePageState();
@@ -49,15 +48,14 @@ class _AboutMePageState extends State<AboutMePage> {
                     },
                     child: Container(
                       decoration: BoxDecoration(
-                             boxShadow: [
-                        BoxShadow(
-                          color: Colors.black38,
-                          offset: Offset(2,2),
-                          blurRadius: 3,
-                          spreadRadius: 0,
-
-                        )
-                      ],
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black38,
+                              offset: Offset(2, 2),
+                              blurRadius: 3,
+                              spreadRadius: 0,
+                            )
+                          ],
                           shape: BoxShape.circle,
                           border: Border.all(
                               color: Color.fromARGB(255, 86, 117, 112))),
@@ -87,10 +85,9 @@ class _AboutMePageState extends State<AboutMePage> {
                       boxShadow: [
                         BoxShadow(
                           color: Colors.black54,
-                          offset: Offset(2,2),
+                          offset: Offset(2, 2),
                           blurRadius: 5,
                           spreadRadius: 0,
-
                         )
                       ],
                       color: Color.fromARGB(255, 243, 225, 206),
@@ -151,13 +148,12 @@ class _AboutMePageState extends State<AboutMePage> {
                     height: 80,
                     width: 600,
                     decoration: BoxDecoration(
-                           boxShadow: [
+                      boxShadow: [
                         BoxShadow(
                           color: Colors.black54,
-                          offset: Offset(2,2),
+                          offset: Offset(2, 2),
                           blurRadius: 5,
                           spreadRadius: 0,
-
                         )
                       ],
                       color: Color.fromARGB(255, 243, 225, 206),
@@ -218,13 +214,12 @@ class _AboutMePageState extends State<AboutMePage> {
                     height: 80,
                     width: 600,
                     decoration: BoxDecoration(
-                        boxShadow: [
+                      boxShadow: [
                         BoxShadow(
                           color: Colors.black54,
-                          offset: Offset(2,2),
+                          offset: Offset(2, 2),
                           blurRadius: 5,
                           spreadRadius: 0,
-
                         )
                       ],
                       color: Color.fromARGB(255, 243, 225, 206),
@@ -287,13 +282,12 @@ class _AboutMePageState extends State<AboutMePage> {
                     height: 80,
                     width: 600,
                     decoration: BoxDecoration(
-                        boxShadow: [
+                      boxShadow: [
                         BoxShadow(
                           color: Colors.black54,
-                          offset: Offset(2,2),
+                          offset: Offset(2, 2),
                           blurRadius: 5,
                           spreadRadius: 0,
-
                         )
                       ],
                       color: Color.fromARGB(255, 243, 225, 206),
@@ -334,11 +328,19 @@ class _AboutMePageState extends State<AboutMePage> {
                                   child: IconButton(
                                     tooltip: 'COPY',
                                     onPressed: () {
-                                      Clipboard.setData(
-                                          ClipboardData(text: 'sanaaltarabishi20@gmail.com'));
+                                      Clipboard.setData(ClipboardData(
+                                          text: 'sanaaltarabishi20@gmail.com'));
                                       ScaffoldMessenger.of(context)
                                           .showSnackBar(
-                                        SnackBar(content: Center(child: Text('Email copied')),duration:.4.seconds ,shape:RoundedRectangleBorder(borderRadius: BorderRadius.circular(25)),padding: EdgeInsets.all(8),),
+                                        SnackBar(
+                                          content: Center(
+                                              child: Text('Email copied')),
+                                          duration: .4.seconds,
+                                          shape: RoundedRectangleBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(25)),
+                                          padding: EdgeInsets.all(8),
+                                        ),
                                       );
                                     },
                                     icon: Icon(
@@ -377,13 +379,12 @@ class _AboutMePageState extends State<AboutMePage> {
                     height: 80,
                     width: 600,
                     decoration: BoxDecoration(
-                        boxShadow: [
+                      boxShadow: [
                         BoxShadow(
                           color: Colors.black54,
-                          offset: Offset(2,2),
+                          offset: Offset(2, 2),
                           blurRadius: 5,
                           spreadRadius: 0,
-
                         )
                       ],
                       color: Color.fromARGB(255, 243, 225, 206),
@@ -419,7 +420,7 @@ class _AboutMePageState extends State<AboutMePage> {
                                     )
                                   ],
                                 ),
-                                          Align(
+                                Align(
                                   alignment: Alignment.topRight,
                                   child: IconButton(
                                     tooltip: 'COPY',
@@ -428,7 +429,15 @@ class _AboutMePageState extends State<AboutMePage> {
                                           ClipboardData(text: '0951298758'));
                                       ScaffoldMessenger.of(context)
                                           .showSnackBar(
-                                        SnackBar(content: Center(child: Text('Phone copied')),duration:.4.seconds ,shape:RoundedRectangleBorder(borderRadius: BorderRadius.circular(25)),padding: EdgeInsets.all(8),),
+                                        SnackBar(
+                                          content: Center(
+                                              child: Text('Phone copied')),
+                                          duration: .4.seconds,
+                                          shape: RoundedRectangleBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(25)),
+                                          padding: EdgeInsets.all(8),
+                                        ),
                                       );
                                     },
                                     icon: Icon(
