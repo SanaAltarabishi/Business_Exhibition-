@@ -17,7 +17,7 @@ class buildDataContaine extends StatelessWidget {
           Navigator.push(
               context,
               PageRouteBuilder(
-                transitionDuration: Duration(milliseconds: 500),
+                transitionDuration: const Duration(milliseconds: 500),
                 pageBuilder: (context, animation, secondaryAnimation) =>
                     PageView.builder(
                   itemCount: model.name.length,
@@ -35,26 +35,27 @@ class buildDataContaine extends StatelessWidget {
               ));
         },
         child: Container(
-            margin: EdgeInsets.only(left: 10, right: 10),
+            margin: const EdgeInsets.only(left: 10, right: 10),
             height: 130,
             decoration: BoxDecoration(
               color: model.color,
-              border: Border.symmetric(
-                  horizontal:
-                      BorderSide(color: const Color.fromARGB(65, 0, 0, 0))),
+              border: const Border.symmetric(
+                  horizontal: BorderSide(color: Color.fromARGB(65, 0, 0, 0))),
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
                   model.name,
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                  style: const TextStyle(
+                      fontWeight: FontWeight.bold, fontSize: 18),
                 ),
                 Container(
                   width: 85,
                   height: 85,
                   child: ColorFiltered(
-                    colorFilter: ColorFilter.mode(Color.fromARGB(255, 243, 225, 206), BlendMode.modulate),
+                    colorFilter: ColorFilter.mode(
+                        Color.fromARGB(255, 243, 225, 206), BlendMode.modulate),
                     child: Image.asset(
                       model.image,
                       fit: BoxFit.cover,

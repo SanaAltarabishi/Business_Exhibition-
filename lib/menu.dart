@@ -17,72 +17,73 @@ class ListPage extends StatefulWidget {
 }
 
 class _ListPageState extends State<ListPage> {
- bool isOpen = false;
-final keyOne = GlobalKey();
-List<CardModel> cards = [
+  bool isOpen = false;
+  final keyOne = GlobalKey();
+  List<CardModel> cards = [
     CardModel(
         name: 'Space animation',
         description: 'A 3D simulation of outer space and night sky',
         image: 'images/sky.jpg',
-        color: Color.fromARGB(255, 243, 225, 206),
-       tools: 'flutter_animate,flextras,extra_alignments,gap,provider,rnd,vector_math',
+        color: const Color.fromARGB(255, 243, 225, 206),
+        tools:
+            'flutter_animate,flextras,extra_alignments,gap,provider,rnd,vector_math',
         duration: '20 days',
         links: 'https://github.com/SanaAltarabishi/space_animation.git'),
-        
-         CardModel(
+    CardModel(
         name: 'ToDo App',
         description: 'help you to stay organized & productive ',
         //by managing your tasks with with free cloud storage services
         image: 'images/todo.png',
-        color: Color.fromARGB(255, 243, 225, 206),
-   tools: 'Dio,Flutter_bloc,Mock storage',
+        color: const Color.fromARGB(255, 243, 225, 206),
+        tools: 'Dio,Flutter_bloc,Mock storage',
         duration: '10 days',
         links: 'https://github.com/SanaAltarabishi/Todo_app.git'),
-
-         CardModel(
+    CardModel(
         name: 'Animation learning app',
         description: 'Using animation to make the learning fun ',
         image: 'images/learn.png',
-        color: Color.fromARGB(255, 243, 225, 206),
-   tools: 'rive,shared_preferences,get_it,animated_text_kit',
+        color: const Color.fromARGB(255, 243, 225, 206),
+        tools: 'rive,shared_preferences,get_it,animated_text_kit',
         duration: '1 week',
         links: 'https://github.com/SanaAltarabishi/animation_app.git'),
-
     CardModel(
         name: 'coffee shop Ui',
-        description: 'Using brown shades,in order to create a cozy aesthetic coffee shop environment',
+        description:
+            'Using brown shades,in order to create a cozy aesthetic coffee shop environment',
         image: 'images/coffee.png',
-        color: Color.fromARGB(255, 243, 225, 206),
-         tools: 'Provider',
+        color: const Color.fromARGB(255, 243, 225, 206),
+        tools: 'Provider',
         duration: '1 week',
         links: 'https://github.com/SanaAltarabishi/coffee_app.git'),
-
     CardModel(
         name: 'Quiz App',
-        description: 'Designed to engage users in enjoyable educational activities ',
+        description:
+            'Designed to engage users in enjoyable educational activities ',
         image: 'images/Quiz.png',
-        color: Color.fromARGB(255, 243, 225, 206), tools: 'flutter_bloc,dio,shimmer',
+        color: const Color.fromARGB(255, 243, 225, 206),
+        tools: 'flutter_bloc,dio,shimmer',
         duration: '1 month',
         links: 'https://github.com/SanaAltarabishi/quiz.git'),
-   
     CardModel(
         name: 'animation lamp Ui ',
-        description: 'Designed to simulate the interaction of turning a lamp on or off',
+        description:
+            'Designed to simulate the interaction of turning a lamp on or off',
         image: 'images/lamp.png',
-        color: Color.fromARGB(255, 243, 225, 206),
-         tools: 'only flutter widget',
+        color: const Color.fromARGB(255, 243, 225, 206),
+        tools: 'only flutter widget',
         duration: '1 day',
         links: 'https://github.com/SanaAltarabishi/animated_Lamp.git'),
-        CardModel(
+    CardModel(
         name: 'Clothing app Ui',
-        description: 'Applying stylish designs to clothing and its accessories and submitting reviews on items',
+        description:
+            'Applying stylish designs to clothing and its accessories and submitting reviews on items',
         image: 'images/laza.jpg',
-        color: Color.fromARGB(255, 243, 225, 206),
-         tools: 'shared_preferences,get_it',
+        color: const Color.fromARGB(255, 243, 225, 206),
+        tools: 'shared_preferences,get_it',
         duration: '1 day',
         links: 'https://github.com/SanaAltarabishi/animated_Lamp.git'),
   ];
- @override
+  @override
   void initState() {
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback(
@@ -91,14 +92,15 @@ List<CardModel> cards = [
       ]),
     );
   }
+
   @override
   Widget build(BuildContext context) {
-     double screenWidth = MediaQuery.of(context).size.width;
+    double screenWidth = MediaQuery.of(context).size.width;
     final themeProvider = Provider.of<ThemeProvider>(context);
     final currentTheme = themeProvider.currentTheme;
 
     return Scaffold(
-body:  Stack(
+      body: Stack(
         children: [
           Positioned(
             top: 0,
@@ -109,17 +111,17 @@ body:  Stack(
                   color: currentTheme == lightTheme
                       ? currentTheme.primaryColorLight
                       : currentTheme.primaryColorDark,
-                  borderRadius: BorderRadius.only(
+                  borderRadius: const BorderRadius.only(
                       bottomLeft: Radius.circular(10),
                       bottomRight: Radius.circular(10)),
                   boxShadow: [
                     isOpen
-                        ? BoxShadow(
+                        ? const BoxShadow(
                             color: Colors.black,
                             offset: Offset(2, 2),
                             blurRadius: 5,
                           )
-                        : BoxShadow(
+                        : const BoxShadow(
                             color: Colors.black38,
                             offset: Offset(2, 2),
                             blurRadius: 5,
@@ -148,8 +150,9 @@ body:  Stack(
                           Navigator.push(
                               context,
                               //MaterialPageRoute(builder:(context) => AboutMePage(),)
-                              PageTransition(child:AboutMePage(), type:PageTransitionType.fade )
-                              );
+                              PageTransition(
+                                  child: AboutMePage(),
+                                  type: PageTransitionType.fade));
                         },
                         child: Text('About Me',
                             style: GoogleFonts.bagelFatOne(
@@ -170,12 +173,12 @@ body:  Stack(
               visible: isOpen,
               child: SingleChildScrollView(
                 child: Container(
-                    padding: EdgeInsets.only(bottom: 5),
-                    margin: EdgeInsets.only(
+                    padding: const EdgeInsets.only(bottom: 5),
+                    margin: const EdgeInsets.only(
                       left: 30,
                       right: 30,
                     ),
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                         boxShadow: [
                           BoxShadow(
                             color: Colors.black38,
@@ -195,9 +198,9 @@ body:  Stack(
                         final card = cards[index];
                         return buildDataContaine(
                           model: card,
-                        ); 
-                            // .animate()
-                            // .then(delay: .1.seconds, duration: .3.seconds);
+                        );
+                        // .animate()
+                        // .then(delay: .1.seconds, duration: .3.seconds);
                       },
                     )
                         .animate()
@@ -220,7 +223,7 @@ body:  Stack(
                 child: Stack(
                   children: [
                     AnimatedContainer(
-                      duration: Duration(seconds: 10),
+                      duration: const Duration(seconds: 10),
                       width: 20,
                       height: 50,
                       decoration: BoxDecoration(
@@ -229,15 +232,15 @@ body:  Stack(
                     ),
                     AnimatedPositioned(
                       top: isOpen ? 32 : 2,
-                      duration: Duration(seconds: 1),
+                      duration: const Duration(seconds: 1),
                       child: Showcase(
                         overlayOpacity: 0,
                         tooltipBackgroundColor:
-                          Color.fromARGB(255, 243, 225, 206),
+                            const Color.fromARGB(255, 243, 225, 206),
                         key: keyOne,
                         description: 'Pull the blind down ',
                         child: Container(
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             color: Colors.black,
                             shape: BoxShape.circle,
                           ),
@@ -254,7 +257,7 @@ body:  Stack(
             top: 80,
             right: 13,
             child: AnimatedContainer(
-              duration: Duration(seconds: 1),
+              duration: const Duration(seconds: 1),
               width: 2,
               height: isOpen ? 320 : 285,
               color: Colors.black,

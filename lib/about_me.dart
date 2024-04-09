@@ -1,7 +1,5 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/services.dart';
@@ -23,7 +21,7 @@ class _AboutMePageState extends State<AboutMePage> {
                 onPressed: () {
                   Navigator.pop(context);
                 },
-                icon: Icon(
+                icon: const Icon(
                   Icons.arrow_back,
                   color: Color.fromARGB(255, 243, 225, 206),
                 )).animate().fadeIn(delay: .4.seconds, duration: .3.seconds),
@@ -31,7 +29,7 @@ class _AboutMePageState extends State<AboutMePage> {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                SizedBox(
+                const SizedBox(
                   height: 35,
                 ),
                 Center(
@@ -48,7 +46,7 @@ class _AboutMePageState extends State<AboutMePage> {
                     },
                     child: Container(
                       decoration: BoxDecoration(
-                          boxShadow: [
+                          boxShadow: const [
                             BoxShadow(
                               color: Colors.black38,
                               offset: Offset(2, 2),
@@ -58,7 +56,7 @@ class _AboutMePageState extends State<AboutMePage> {
                           ],
                           shape: BoxShape.circle,
                           border: Border.all(
-                              color: Color.fromARGB(255, 86, 117, 112))),
+                              color: const Color.fromARGB(255, 86, 117, 112))),
                       width: 100,
                       height: 100,
                       child: ClipOval(
@@ -73,7 +71,7 @@ class _AboutMePageState extends State<AboutMePage> {
                     ),
                   ),
                 ).animate().fadeIn(delay: .4.seconds, duration: .3.seconds),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ), //change into mediaQuery
                 Padding(
@@ -82,7 +80,7 @@ class _AboutMePageState extends State<AboutMePage> {
                     height: 80,
                     width: 600,
                     decoration: BoxDecoration(
-                      boxShadow: [
+                      boxShadow: const [
                         BoxShadow(
                           color: Colors.black54,
                           offset: Offset(2, 2),
@@ -90,7 +88,7 @@ class _AboutMePageState extends State<AboutMePage> {
                           spreadRadius: 0,
                         )
                       ],
-                      color: Color.fromARGB(255, 243, 225, 206),
+                      color: const Color.fromARGB(255, 243, 225, 206),
                       borderRadius: BorderRadius.circular(25),
                     ),
                     child: Padding(
@@ -101,15 +99,15 @@ class _AboutMePageState extends State<AboutMePage> {
                             Row(
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: [
-                                SizedBox(
+                                const SizedBox(
                                   width: 2,
                                 ),
-                                Icon(
+                                const Icon(
                                   Icons.person_2_rounded,
                                   color: Colors.black,
                                   size: 20,
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   width: 5,
                                 ),
                                 Text(
@@ -121,14 +119,14 @@ class _AboutMePageState extends State<AboutMePage> {
                                 )
                               ],
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 2,
                             ),
                             AnimatedTextKit(animatedTexts: [
                               TyperAnimatedText(
                                   '  Sana Mohamad al Tarabishi                                 ',
-                                  speed: Duration(milliseconds: 80),
-                                  textStyle: TextStyle(
+                                  speed: const Duration(milliseconds: 80),
+                                  textStyle: const TextStyle(
                                       fontSize: 14,
                                       fontWeight: FontWeight.bold,
                                       color: Colors.black))
@@ -139,7 +137,7 @@ class _AboutMePageState extends State<AboutMePage> {
                   ).animate().fadeIn(delay: .6.seconds, duration: .3.seconds),
                 ),
 
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ), //change into mediaQuery
                 Padding(
@@ -148,7 +146,7 @@ class _AboutMePageState extends State<AboutMePage> {
                     height: 80,
                     width: 600,
                     decoration: BoxDecoration(
-                      boxShadow: [
+                      boxShadow: const [
                         BoxShadow(
                           color: Colors.black54,
                           offset: Offset(2, 2),
@@ -156,7 +154,7 @@ class _AboutMePageState extends State<AboutMePage> {
                           spreadRadius: 0,
                         )
                       ],
-                      color: Color.fromARGB(255, 243, 225, 206),
+                      color: const Color.fromARGB(255, 243, 225, 206),
                       borderRadius: BorderRadius.circular(25),
                     ),
                     child: Padding(
@@ -167,15 +165,15 @@ class _AboutMePageState extends State<AboutMePage> {
                             Row(
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: [
-                                SizedBox(
+                                const SizedBox(
                                   width: 2,
                                 ),
-                                Icon(
+                                const Icon(
                                   Icons.menu_book_sharp,
                                   color: Colors.black,
                                   size: 20,
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   width: 5,
                                 ),
                                 Text(
@@ -187,14 +185,14 @@ class _AboutMePageState extends State<AboutMePage> {
                                 )
                               ],
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 2,
                             ),
                             AnimatedTextKit(animatedTexts: [
                               TyperAnimatedText(
                                   '  Computer Engineering and Automation at Damascus University',
-                                  speed: Duration(milliseconds: 80),
-                                  textStyle: TextStyle(
+                                  speed: const Duration(milliseconds: 80),
+                                  textStyle: const TextStyle(
                                       fontSize: 14,
                                       fontWeight: FontWeight.bold,
                                       color: Colors.black))
@@ -205,7 +203,7 @@ class _AboutMePageState extends State<AboutMePage> {
                   ).animate().fadeIn(delay: .8.seconds, duration: .3.seconds),
                 ),
 
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ), //change into mediaQuery
                 Padding(
@@ -214,7 +212,7 @@ class _AboutMePageState extends State<AboutMePage> {
                     height: 80,
                     width: 600,
                     decoration: BoxDecoration(
-                      boxShadow: [
+                      boxShadow: const [
                         BoxShadow(
                           color: Colors.black54,
                           offset: Offset(2, 2),
@@ -222,7 +220,7 @@ class _AboutMePageState extends State<AboutMePage> {
                           spreadRadius: 0,
                         )
                       ],
-                      color: Color.fromARGB(255, 243, 225, 206),
+                      color: const Color.fromARGB(255, 243, 225, 206),
                       borderRadius: BorderRadius.circular(25),
                     ),
                     child: Padding(
@@ -233,15 +231,15 @@ class _AboutMePageState extends State<AboutMePage> {
                             Row(
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: [
-                                SizedBox(
+                                const SizedBox(
                                   width: 2,
                                 ),
-                                Icon(
+                                const Icon(
                                   Icons.work_outlined,
                                   color: Colors.black,
                                   size: 20,
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   width: 5,
                                 ),
                                 Text(
@@ -253,16 +251,16 @@ class _AboutMePageState extends State<AboutMePage> {
                                 )
                               ],
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 2,
                             ),
                             AnimatedTextKit(animatedTexts: [
                               TyperAnimatedText(
                                   '  Not yet                                                    ',
-                                  speed: Duration(
+                                  speed: const Duration(
                                     milliseconds: 80,
                                   ),
-                                  textStyle: TextStyle(
+                                  textStyle: const TextStyle(
                                       fontSize: 14,
                                       fontWeight: FontWeight.bold,
                                       color: Colors.black))
@@ -273,7 +271,7 @@ class _AboutMePageState extends State<AboutMePage> {
                   ).animate().fadeIn(delay: 1.0.seconds, duration: .3.seconds),
                 ),
 
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ), //change into mediaQuery
                 Padding(
@@ -282,7 +280,7 @@ class _AboutMePageState extends State<AboutMePage> {
                     height: 80,
                     width: 600,
                     decoration: BoxDecoration(
-                      boxShadow: [
+                      boxShadow: const [
                         BoxShadow(
                           color: Colors.black54,
                           offset: Offset(2, 2),
@@ -290,7 +288,7 @@ class _AboutMePageState extends State<AboutMePage> {
                           spreadRadius: 0,
                         )
                       ],
-                      color: Color.fromARGB(255, 243, 225, 206),
+                      color: const Color.fromARGB(255, 243, 225, 206),
                       borderRadius: BorderRadius.circular(25),
                     ),
                     child: Padding(
@@ -303,15 +301,15 @@ class _AboutMePageState extends State<AboutMePage> {
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   children: [
-                                    SizedBox(
+                                    const SizedBox(
                                       width: 2,
                                     ),
-                                    Icon(
+                                    const Icon(
                                       Icons.email,
                                       color: Colors.black,
                                       size: 20,
                                     ),
-                                    SizedBox(
+                                    const SizedBox(
                                       width: 5,
                                     ),
                                     Text(
@@ -328,22 +326,22 @@ class _AboutMePageState extends State<AboutMePage> {
                                   child: IconButton(
                                     tooltip: 'COPY',
                                     onPressed: () {
-                                      Clipboard.setData(ClipboardData(
+                                      Clipboard.setData(const ClipboardData(
                                           text: 'sanaaltarabishi20@gmail.com'));
                                       ScaffoldMessenger.of(context)
                                           .showSnackBar(
                                         SnackBar(
-                                          content: Center(
+                                          content: const Center(
                                               child: Text('Email copied')),
                                           duration: .4.seconds,
                                           shape: RoundedRectangleBorder(
                                               borderRadius:
                                                   BorderRadius.circular(25)),
-                                          padding: EdgeInsets.all(8),
+                                          padding: const EdgeInsets.all(8),
                                         ),
                                       );
                                     },
-                                    icon: Icon(
+                                    icon: const Icon(
                                       Icons.content_copy_rounded,
                                       color: Colors.black,
                                     ),
@@ -358,8 +356,8 @@ class _AboutMePageState extends State<AboutMePage> {
                             AnimatedTextKit(animatedTexts: [
                               TyperAnimatedText(
                                   '  sanaaltarabishi20@gmail.com                                ',
-                                  speed: Duration(milliseconds: 80),
-                                  textStyle: TextStyle(
+                                  speed: const Duration(milliseconds: 80),
+                                  textStyle: const TextStyle(
                                       fontSize: 14,
                                       fontWeight: FontWeight.bold,
                                       color: Colors.black)),
@@ -370,7 +368,7 @@ class _AboutMePageState extends State<AboutMePage> {
                   ).animate().fadeIn(delay: 1.2.seconds, duration: .3.seconds),
                 ),
 
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ), //change into mediaQuery
                 Padding(
@@ -379,7 +377,7 @@ class _AboutMePageState extends State<AboutMePage> {
                     height: 80,
                     width: 600,
                     decoration: BoxDecoration(
-                      boxShadow: [
+                      boxShadow: const [
                         BoxShadow(
                           color: Colors.black54,
                           offset: Offset(2, 2),
@@ -387,7 +385,7 @@ class _AboutMePageState extends State<AboutMePage> {
                           spreadRadius: 0,
                         )
                       ],
-                      color: Color.fromARGB(255, 243, 225, 206),
+                      color: const Color.fromARGB(255, 243, 225, 206),
                       borderRadius: BorderRadius.circular(25),
                     ),
                     child: Padding(
@@ -400,15 +398,15 @@ class _AboutMePageState extends State<AboutMePage> {
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   children: [
-                                    SizedBox(
+                                    const SizedBox(
                                       width: 2,
                                     ),
-                                    Icon(
+                                    const Icon(
                                       Icons.phone,
                                       color: Colors.black,
                                       size: 20,
                                     ),
-                                    SizedBox(
+                                    const SizedBox(
                                       width: 5,
                                     ),
                                     Text(
@@ -425,22 +423,22 @@ class _AboutMePageState extends State<AboutMePage> {
                                   child: IconButton(
                                     tooltip: 'COPY',
                                     onPressed: () {
-                                      Clipboard.setData(
-                                          ClipboardData(text: '0951298758'));
+                                      Clipboard.setData(const ClipboardData(
+                                          text: '0951298758'));
                                       ScaffoldMessenger.of(context)
                                           .showSnackBar(
                                         SnackBar(
-                                          content: Center(
+                                          content: const Center(
                                               child: Text('Phone copied')),
                                           duration: .4.seconds,
                                           shape: RoundedRectangleBorder(
                                               borderRadius:
                                                   BorderRadius.circular(25)),
-                                          padding: EdgeInsets.all(8),
+                                          padding: const EdgeInsets.all(8),
                                         ),
                                       );
                                     },
-                                    icon: Icon(
+                                    icon: const Icon(
                                       Icons.content_copy_rounded,
                                       color: Colors.black,
                                     ),
@@ -455,8 +453,8 @@ class _AboutMePageState extends State<AboutMePage> {
                             AnimatedTextKit(animatedTexts: [
                               TyperAnimatedText(
                                   '  0951000000                                                 ',
-                                  speed: Duration(milliseconds: 80),
-                                  textStyle: TextStyle(
+                                  speed: const Duration(milliseconds: 80),
+                                  textStyle: const TextStyle(
                                       fontSize: 14,
                                       fontWeight: FontWeight.bold,
                                       color: Colors.black))

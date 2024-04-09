@@ -8,7 +8,7 @@ void main() {
   runApp(
     ChangeNotifierProvider(
       create: (_) => ThemeProvider(),
-      child: MyApp(),
+      child: const MyApp(),
     ),
   );
 }
@@ -21,17 +21,19 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-
-
   @override
   Widget build(BuildContext context) {
-     //final themeProvider = Provider.of<ThemeProvider>(context);
-   // final currentTheme = themeProvider.currentTheme;
+    //final themeProvider = Provider.of<ThemeProvider>(context);
+    // final currentTheme = themeProvider.currentTheme;
     return MaterialApp(
-      debugShowCheckedModeBanner:false,
-      home: ShowCaseWidget(builder:Builder(builder:(_) => ListPage(),)),
-   theme: Provider.of<ThemeProvider>(context).currentTheme,
-   //themeMode: currentTheme.c,
+      debugShowCheckedModeBanner: false,
+      home: ShowCaseWidget(
+        builder: Builder(
+          builder: (_) => const ListPage(),
+        ),
+      ),
+      theme: Provider.of<ThemeProvider>(context).currentTheme,
+      //themeMode: currentTheme.c,
     );
   }
 }

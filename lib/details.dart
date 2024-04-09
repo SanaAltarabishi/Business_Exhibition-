@@ -9,14 +9,14 @@ import 'package:works_app/cardModel.dart';
 
 class DetailsPage extends StatelessWidget {
   final CardModel model;
- DetailsPage({
+  DetailsPage({
     Key? key,
     required this.model,
   }) : super(key: key);
 
   Widget build(BuildContext context) {
-      Color color =//Color.fromARGB(255, 243, 225, 206);
-       Colors.brown.shade400;
+    Color color = //Color.fromARGB(255, 243, 225, 206);
+        Colors.brown.shade400;
     Future<void> _onOpen(LinkableElement link) async {
       if (!await launchUrl(Uri.parse(link.url))) {
         throw Exception('Could not launch ${link.url}');
@@ -27,27 +27,30 @@ class DetailsPage extends StatelessWidget {
       body: SingleChildScrollView(
           child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          SizedBox(
+          const SizedBox(
             height: 5,
           ),
-          IconButton(
-            onPressed: () {
-              Navigator.pop(context);
-            },
-            icon: Icon(
-              Icons.arrow_back,
-              color: Color.fromARGB(255, 243, 225, 206),
-            ),
-          ).animate().fadeIn(delay: .4.seconds, duration: .3.seconds),
-          SizedBox(
+          Align(
+            alignment: Alignment.topLeft,
+            child: IconButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              icon: const Icon(
+                Icons.arrow_back,
+                color: Color.fromARGB(255, 243, 225, 206),
+              ),
+            ).animate().fadeIn(delay: .4.seconds, duration: .3.seconds),
+          ),
+          const SizedBox(
             height: 15,
           ),
           Center(
             child: Container(
               decoration: BoxDecoration(
-                boxShadow: [
+                boxShadow: const [
                   BoxShadow(
                     color: Colors.black38,
                     offset: Offset(2, 2),
@@ -62,8 +65,8 @@ class DetailsPage extends StatelessWidget {
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(10),
                 child: ColorFiltered(
-                                      colorFilter: ColorFilter.mode(Color.fromARGB(255, 243, 225, 206), BlendMode.modulate),
-
+                  colorFilter: const ColorFilter.mode(
+                      Color.fromARGB(255, 243, 225, 206), BlendMode.modulate),
                   child: Image.asset(
                     model.image,
                     fit: BoxFit.fill,
@@ -72,16 +75,16 @@ class DetailsPage extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
-         Container(
-            margin: EdgeInsets.only(left: 10, right: 10),
-            padding: EdgeInsets.all(8.0),
+          Container(
+            margin: const EdgeInsets.only(left: 10, right: 10),
+            padding: const EdgeInsets.all(8.0),
             width: 600,
             height: 100,
             decoration: BoxDecoration(
-              boxShadow: [
+              boxShadow: const [
                 BoxShadow(
                   color: Colors.black38,
                   offset: Offset(2, 2),
@@ -89,8 +92,7 @@ class DetailsPage extends StatelessWidget {
                   spreadRadius: 0,
                 ),
               ],
-              color:color,
-            
+              color: color,
               borderRadius: BorderRadius.circular(25),
             ),
             child: Column(
@@ -106,33 +108,34 @@ class DetailsPage extends StatelessWidget {
                     decoration: TextDecoration.underline,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 3,
                 ),
                 AnimatedTextKit(
                   totalRepeatCount: 1,
                   animatedTexts: [
                     TyperAnimatedText(model.name,
-                        speed: Duration(milliseconds: 80),
-                        textStyle: TextStyle(
-                            fontSize: 15,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.black,))
+                        speed: const Duration(milliseconds: 80),
+                        textStyle: const TextStyle(
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black,
+                        ))
                   ],
                 ),
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Container(
-            margin: EdgeInsets.only(left: 10, right: 10),
-            padding: EdgeInsets.all(8.0),
+            margin: const EdgeInsets.only(left: 10, right: 10),
+            padding: const EdgeInsets.all(8.0),
             width: 600,
             height: 100,
             decoration: BoxDecoration(
-              boxShadow: [
+              boxShadow: const [
                 BoxShadow(
                   color: Colors.black38,
                   offset: Offset(2, 2),
@@ -140,7 +143,7 @@ class DetailsPage extends StatelessWidget {
                   spreadRadius: 0,
                 ),
               ],
-              color:color,
+              color: color,
               borderRadius: BorderRadius.circular(25),
             ),
             child: Column(
@@ -156,15 +159,15 @@ class DetailsPage extends StatelessWidget {
                     decoration: TextDecoration.underline,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 3,
                 ),
                 AnimatedTextKit(
                   totalRepeatCount: 1,
                   animatedTexts: [
                     TyperAnimatedText(model.description,
-                        speed: Duration(milliseconds: 80),
-                        textStyle: TextStyle(
+                        speed: const Duration(milliseconds: 80),
+                        textStyle: const TextStyle(
                             fontSize: 15,
                             fontWeight: FontWeight.bold,
                             color: Colors.black))
@@ -173,16 +176,16 @@ class DetailsPage extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Container(
-            padding: EdgeInsets.all(8),
-            margin:  EdgeInsets.only(left: 10, right: 10),
+            padding: const EdgeInsets.all(8),
+            margin: const EdgeInsets.only(left: 10, right: 10),
             width: 600,
             height: 100,
             decoration: BoxDecoration(
-              boxShadow: [
+              boxShadow: const [
                 BoxShadow(
                   color: Colors.black38,
                   offset: Offset(2, 2),
@@ -190,7 +193,7 @@ class DetailsPage extends StatelessWidget {
                   spreadRadius: 0,
                 ),
               ],
-              color:color,
+              color: color,
               borderRadius: BorderRadius.circular(25),
             ),
             child: Column(
@@ -206,15 +209,15 @@ class DetailsPage extends StatelessWidget {
                     decoration: TextDecoration.underline,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 3,
                 ),
                 AnimatedTextKit(
                   totalRepeatCount: 1,
                   animatedTexts: [
                     TyperAnimatedText(model.tools,
-                        speed: Duration(milliseconds: 80),
-                        textStyle: TextStyle(
+                        speed: const Duration(milliseconds: 80),
+                        textStyle: const TextStyle(
                             fontSize: 15,
                             fontWeight: FontWeight.bold,
                             color: Colors.black))
@@ -223,16 +226,16 @@ class DetailsPage extends StatelessWidget {
               ],
             ),
           ),
-        SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Container(
-            margin:  EdgeInsets.only(left: 10, right: 10),
-            padding: EdgeInsets.all(8),
+            margin: const EdgeInsets.only(left: 10, right: 10),
+            padding: const EdgeInsets.all(8),
             width: 600,
             height: 100,
             decoration: BoxDecoration(
-              boxShadow: [
+              boxShadow: const [
                 BoxShadow(
                   color: Colors.black38,
                   offset: Offset(2, 2),
@@ -240,7 +243,7 @@ class DetailsPage extends StatelessWidget {
                   spreadRadius: 0,
                 ),
               ],
-              color:color,
+              color: color,
               borderRadius: BorderRadius.circular(25),
             ),
             child: SingleChildScrollView(
@@ -257,29 +260,29 @@ class DetailsPage extends StatelessWidget {
                       decoration: TextDecoration.underline,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 3,
                   ),
                   SelectableLinkify(
                     onOpen: _onOpen,
                     linkStyle:
-                        TextStyle(fontSize: 15, color: Colors.black),
+                        const TextStyle(fontSize: 15, color: Colors.black),
                     text: model.links,
                   ).animate(delay: 5.seconds)
                 ],
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Container(
-            margin:  EdgeInsets.only(left: 10, right: 10),
-            padding: EdgeInsets.all(8),
+            margin: const EdgeInsets.only(left: 10, right: 10),
+            padding: const EdgeInsets.all(8),
             width: 600,
             height: 100,
             decoration: BoxDecoration(
-              boxShadow: [
+              boxShadow: const [
                 BoxShadow(
                   color: Colors.black38,
                   offset: Offset(2, 2),
@@ -287,7 +290,7 @@ class DetailsPage extends StatelessWidget {
                   spreadRadius: 0,
                 ),
               ],
-              color:color,
+              color: color,
               borderRadius: BorderRadius.circular(25),
             ),
             child: Column(
@@ -303,15 +306,15 @@ class DetailsPage extends StatelessWidget {
                     decoration: TextDecoration.underline,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 3,
                 ),
                 AnimatedTextKit(
                   totalRepeatCount: 1,
                   animatedTexts: [
                     TyperAnimatedText(model.duration,
-                        speed: Duration(milliseconds: 80),
-                        textStyle: TextStyle(
+                        speed: const Duration(milliseconds: 80),
+                        textStyle: const TextStyle(
                             fontSize: 15,
                             fontWeight: FontWeight.bold,
                             color: Colors.black))
@@ -320,8 +323,7 @@ class DetailsPage extends StatelessWidget {
               ],
             ),
           ),
-        
-          SizedBox(
+          const SizedBox(
             height: 15,
           ),
         ],
